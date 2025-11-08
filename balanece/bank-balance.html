@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Balance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-1 {
+            width: 30%;
+            height: 70%;
+            background-color: white;
+            /* text-align: center; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            
+            font-family: Stack Sans Text;
+        }
+
+        .display{
+            width: 80%;
+            height: 20%;
+            background-color: rgba(211, 211, 211, 0.442);
+            gap: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input{
+            width: 80%;
+            height: 8%;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid;
+            margin-bottom: 20px;
+            text-align: center;
+            
+        }
+
+        .h1{
+            font-weight: 800;
+        }
+
+        button{
+            width: 80%;
+            height: 10%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            background-color: skyblue;
+           border: 2px solid rgba(0, 0, 255, 0.491);
+            color: white;
+        }
+
+        .output{
+            width: 80%;
+            height: 10%;
+            background-color: rgba(144, 238, 144, 0.518);
+            font-family: 30px;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box-1">
+            <h1 class="h1">ATM Withdrawal</h1>
+            <div class="display"> <p>Total Balance : </p>
+                <p id="total-amount"></p>
+                <p id="display-1"></p>
+                <p id="display-2"></p>
+            </div>
+            <input type="text" id="input-1" placeholder="Enter amount to Withdraw">
+            <button onclick="checkBalance()">Withdraw</button>
+            <div class="output" id="output">Withdraw Successsful</div>
+        </div>
+    </div>
+</body>
+<script>
+      let balance = 10000;
+        let withdrawAmount = 0 ;
+
+        document.getElementById("total-amount").innerHTML = balance ;
+
+        function checkBalance(){
+
+            withdrawAmount = document.getElementById("input-1").value;
+            balance = balance - withdrawAmount;
+
+            // document.getElementById("display-1").innerHTML = " withdraw amount is : " + withdrawAmount;
+            // document.getElementById("display-2").innerHTML = " balance amount is : " + balance ;
+            document.getElementById("total-amount").innerHTML  = balance;
+            document.getElementById("output").style.display = "block"
+        }
+
+       
+</script>
+
+</html>
