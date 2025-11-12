@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operation Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .input {
+            width: 100%;
+            height: 50%;
+            background-color: rgba(255, 0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 30px;
+            /* align-items: center; */
+            gap: 30px;
+            margin-left: 30px;
+            color: black;
+        }
+
+        .display {
+            width: 60%;
+            height: 10%;
+            display: none;
+            font-size: 40px ;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            width: 100%;
+            height: 30%;
+            background-color: rgba(0, 128, 0, 0);
+            gap: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+
+        }
+
+        input {
+            width: 90.9%;
+            height: 40px;
+            
+            border-radius: 10px;
+            border: solid 1px;
+        }
+
+        button {
+            width: 500px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(8, 162, 8);
+            font-size: 20px;
+        }
+
+        @media (max-width:477px){
+            button{
+                width: 80%;
+            }
+
+            .display{
+                height: 15%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+           
+            <div class="input"><span style="text-align: center; font-size: 40px; color: black;">Math Operation Calculator</span>
+                First number
+                <input type="number" placeholder="Enter First Number " id="input1">
+                Second number
+                <input type="number" placeholder="Enter Secon Number " id="input2">
+            </div>
+            <div class="buttons">
+                <button onclick="Addnumber()">Add(+)</button>
+                <button onclick="subnumber()">Sub(-)</button>
+                <button onclick="multinumber()">Mul(*)</button>
+                <button onclick="divnumber()">Div(/)</button>
+            </div>
+            <div class="display" id="display"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+
+
+    function Addnumber() {
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+
+        sum = num1 + num2;
+
+        document.getElementById("display").innerHTML = "Addition is : " + sum;
+        document.getElementById("display").style.display = "block";
+        document.getElementById("display").style.backgroundColor = "lightgreen"
+        
+    }
+
+    function subnumber() {
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+
+        sum = num1 - num2;
+
+        document.getElementById("display").innerHTML = "Subtraction is : " + sum;
+        document.getElementById("display").style.display = "block";
+    }
+
+    function multinumber() {
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+
+        sum = num1 * num2;
+
+        document.getElementById("display").innerHTML = "Multiplication is : " + sum;
+        document.getElementById("display").style.display = "block";
+    }
+
+    function divnumber() {
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+
+        sum = num1 / num2;
+
+        document.getElementById("display").innerHTML = "Division is " + sum;
+        document.getElementById("display").style.display = "block";
+    }
+</script>
+
+</html>

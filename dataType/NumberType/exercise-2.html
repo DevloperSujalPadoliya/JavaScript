@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Circle </title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .display {
+            width: 50%;
+            height: 40%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            border-top: solid 1px;
+            border-left: solid 1px;
+            border-right: solid 1px;
+            font-size: 30px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .inputs {
+            width: 50%;
+            height: 30%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 30px;
+           
+            border-left: solid 1px;
+            border-right: solid 1px;
+        }
+
+        .buttons {
+            width: 500px;
+            height: 40px;
+            background-color: rgb(252, 255, 252);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+        input {
+            height: 40px;
+            width: 500px;
+            border-radius: 10px;
+            border: none;
+            background-color: whitesmoke;
+            border: black 1px solid;
+            color: rgb(255, 9, 9);
+
+        }
+
+        .display1{
+            width: 50%;
+            height: 10%;
+            background-color: white;
+            display: none;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+            border-left: solid 1px;
+            border-right: solid 1px;
+            border-bottom: solid 1px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        
+        }
+
+        .green{
+            width: 120px;
+            height: 120px;
+            background-color: green;
+            margin-top: 30px;
+            border-radius: 100px;
+            
+        }
+
+        button{
+            width: 500px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(0, 255, 34);
+            color: black;
+            font-size: 20px;
+            box-shadow: 5px 2px 20px 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display">
+            Circler area Calculator : 
+            <div class="green"></div>
+        </div>
+        <div class="inputs">Enter Radios
+            <input type="text" id="input1" placeholder="Enter Radius " style="color: black;">
+            <div class="buttons"><button onclick="Sumtwodigit()">click</button></div>
+
+        </div>
+        <div class="display1" id="display"></div>
+        
+    </div>
+</body>
+<script>
+    let radius = 0;
+    const pie = 3.1416;
+    let = area = 0;
+
+        function Sumtwodigit() {
+
+            radius = document.getElementById("input1").value;
+         let   area = pie * Number(radius) * Number(radius);
+
+            document.getElementById("display").innerHTML = " This is radius value : " +area;
+            document.getElementById("display").style.display = "block";
+            
+
+        }
+
+
+    
+</script>
+
+</html>
