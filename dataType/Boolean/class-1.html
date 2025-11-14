@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Opration </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            font-family: Roboto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display {
+            width: 50%;
+            height: 20%;
+            background-color:rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .inputs {
+            width: 50%;
+            height: 40%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            font-size: 25px;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            gap: 30px;
+            font-weight: 500;
+            
+        }
+
+        .buttons {
+            width: 50%;
+            height: 10%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+           
+            /* border-radius: 10px; */
+        }
+
+        input{
+            height: 40px;
+            width: 650px;
+            border-radius: 10px;
+            border: solid 1px ;
+            margin-left: 20px;
+            
+        }
+
+        button{
+            width: 650px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: lightgreen;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+        .display-1{
+            width: 50%;
+            height: 20%;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .show{
+            width: 650px;
+            height: 150px;
+            background-color: rgba(128, 128, 128, 0.538);
+            margin-left: 20px;
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display">Comparison Opration </div>
+        <div class="inputs">
+            <span style="margin-left: 20px;">Give First Number</span>
+            <input type="text" id="input1" placeholder="number one">
+            <span style="margin-left: 20px;">Give First Number</span>
+            <input type="text" id="input2" placeholder="number two">
+        </div>
+        <div class="buttons"><button onclick="sumtwodigit()">Click</button></div>
+        <div class="display-1">
+            <div class="show" id="display"></div>
+        </div>
+        
+    </div>
+</body>
+<script>
+
+    
+       function sumtwodigit (){
+        let a = document.getElementById("input1");
+        let b = document.getElementById("input2");
+        let c =  a <= b;
+         
+         document.getElementById("display").innerHTML = "Boolean value is : " + c;
+         
+       }
+    
+
+
+</script>
+
+</html>
