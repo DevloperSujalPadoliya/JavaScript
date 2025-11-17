@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Combiner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 40%;
+            height: 90%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+        }
+
+        span{
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        input{
+            width: 90%;
+            height: 5%;
+        }
+
+        button{
+            width: 90%;
+            height: 7%;
+            font-weight: 800;
+            font-size: 15px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(65, 226, 65);
+        color: white;
+        }
+
+        .display{
+            width: 90%;
+            height: 10%;
+            background-color: lightblue;
+             text-align: center;
+            align-content: center;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        .display1{
+            width: 90%;
+            height: 6%;
+            background-color: black;
+            display: none;
+            color: rgb(79, 233, 79);
+            text-align: start;
+            align-content: center;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"><span>Name Combiner</span><br><br>
+            <span style="margin-right: 390px; font-size: 20px; font-weight: 600;" >First Name :</span>
+            <input type="text" id="input1" placeholder="Enter Your First Name "><br><br>
+             <span style="margin-right: 390px; font-size: 20px; font-weight: 600;" >Last Name :</span>
+            <input type="text" id="input2" placeholder="Enter Your Last Name "><br><br>
+
+            <button onclick="combinestri()">Combine Names</button><br>
+
+            <div class="display" id="display"></div><br>
+             <code class="display1" id="display1"></code>
+        
+        </div>
+    </div>
+</body>
+<script>
+
+function combinestri(){
+
+   let x =  document.getElementById("input1").value;
+    let y = document.getElementById("input2").value;
+
+    let s = x + " " + y;
+
+    document.getElementById("display").innerHTML ="Full Name : "  + s;
+    document.getElementById("display1").innerHTML ="> Full Name  : "  + s;
+    document.getElementById("display1").style.display = "block";
+
+
+}
+</script>
+</html>
