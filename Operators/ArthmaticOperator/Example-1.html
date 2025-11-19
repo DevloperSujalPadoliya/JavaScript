@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display1"></p>
+    <input id="input1" type="text">
+    <input id="input2" type="text">
+    <button onclick="sumofdigit()">click</button>
+</body>
+<script>
+    function sumofdigit(){
+
+        let a = Number(document.getElementById("input1").value);
+        let b = Number(document.getElementById("input2").value);
+
+        let x = a + b;
+        let y = a - b;
+
+        document.getElementById("display").innerHTML = "Addition of : "  + x;
+        document.getElementById("display1").innerHTML = "Multiplication of :" + y;
+    }
+</script>
+</html>
