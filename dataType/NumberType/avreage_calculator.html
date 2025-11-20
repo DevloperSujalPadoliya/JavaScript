@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+        }
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 35%;
+            height: 80%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.295);
+            border-radius: 10px;
+
+
+        }
+
+        .display {
+            width: 90%;
+            height: 10%;
+            background-color: rgba(173, 216, 230, 0.425);
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 25px;
+            color: rgb(0, 0, 0);
+        }
+
+        input {
+            width: 90%;
+            height: 30px;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+
+        button {
+            width: 90%;
+            height: 40px;
+            border: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            background-color: rgb(247, 120, 120);
+        }
+
+        span {
+            font-weight: 600;
+            /* margin-right: 300px; */
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        b{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+
+            <p>Average Calculator </p>
+
+            <span>Firsts Number : </span>
+            <input id="input1" type="number" placeholder="Enter a number"><br>
+            <span>Secnd Number : </span>
+            <input id="input2" type="number" placeholder="Enter a number"><br>
+            <span>Third Number :</span>
+            <input id="input3" type="number" placeholder="Enter a number"><br>
+
+            <button onclick="average()">click</button><br>
+            <div class="display" id="display"></div><br><br><br>
+        </div>
+    </div>
+
+    <script>
+
+function average(){
+
+    let a = Number(document.getElementById("input1").value);
+    let b = Number(document.getElementById("input2").value);
+    let c = Number(document.getElementById("input3").value);
+
+    let x = a + b + c;
+    let y = x / 3;
+
+    document.getElementById("display").innerHTML = " The average of  <b>"  +  a + " "  + b + "</b> " + "& <b>" + c + " </b> is  : " +  y;
+
+}
+    </script>
+</body>
+
+</html>
