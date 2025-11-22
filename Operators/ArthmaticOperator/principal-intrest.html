@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+</head>
+<body>
+    <p id="display"></p>
+    <input type="input" id="input1" placeholder="princiap ">
+    <input type="input" id="input2" placeholder="Time">
+    <input type="input" id="input3" placeholder="Rate of intrest ">
+    <button onclick="pricipalinput()">Click</button>
+
+    <script>
+       function pricipalinput(){
+        let principa = Number(document.getElementById("input1").value);
+        let Time = Number(document.getElementById("input2").value);
+        let RateOfIntrest = Number(document.getElementById("input3").value);
+
+        let a = principa * Time ;
+        let b = RateOfIntrest / 100;
+
+        let c = a * b;
+
+
+        document.getElementById("display").innerHTML = "simple intrest : " +  c ;
+       }
+
+       let number = Math.random();
+    //    alert(number * 100);
+       let s = Math.floor(number * 10)
+       alert(s)
+    </script>
+</body>
+</html>
