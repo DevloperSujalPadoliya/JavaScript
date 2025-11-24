@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random function</title>
+</head>
+<body>
+
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="label"></p>
+    <p id="result"></p>
+    <script>
+        let num = Math.random();
+        let num2 = Math.random();   
+
+        let x = num * 10;
+        let y = num2 * 10;
+
+
+
+        let g = Math.floor(x);
+        let h = Math.floor(y);
+
+        let multi = g * h;
+
+       
+
+        
+
+        document.getElementById("display1").innerHTML = g;
+        
+        document.getElementById("display2").innerHTML = h;
+
+       document.getElementById("label").innerHTML = "The Multiplication of " + g + " & " + h + " is "
+
+
+       let userAnswer = prompt(g + " x " + h + " = ?")
+       
+
+       let result = multi == userAnswer ;
+     
+       document.getElementById("result").innerHTML = result;
+
+
+    </script>
+</body>
+</html>
