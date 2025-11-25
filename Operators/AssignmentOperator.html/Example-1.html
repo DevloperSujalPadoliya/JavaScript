@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Roboto;
+        }
+
+        .main{
+            width: 100vw;
+            background-color: rgb(255, 255, 255);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .box {
+            width: 40%;
+            height: 60%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.391);
+        }
+
+        .para1{
+            width: 80%;
+            height: 10%;
+            background-color: grey;
+            text-align: center;
+            align-content: center;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+        }
+
+        button{
+            width: 40%;
+            height: 7%;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(212, 32, 212);
+            color: white;
+            font-size: 18px;
+        }
+        
+        .display {
+            width: 80%;
+            height: 10%;
+            background-color: lightblue;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box">
+            <p class="para1"> Math Marks is : 40</p>
+            <p class="para1"> Science marks is : 35</p>
+            <button onclick="marksis()">click</button><br>
+            <div class="display" id="display"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        function marksis() {
+
+            let math = 40;
+            let sci = 35;
+
+            math += sci  //math = math + sci;
+
+            document.getElementById("display").innerHTML = "Total Marks is : " + math;
+        }
+    </script>
+</body>
+
+</html>
