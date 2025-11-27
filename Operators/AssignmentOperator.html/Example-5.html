@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 40%;
+            height: 80%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.295);
+            border-radius: 10px;
+
+
+        }
+
+        .display {
+            width: 80%;
+            height: 15%;
+            background-color: lightcoral;
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        input {
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+
+        button {
+            width: 80%;
+            height: 35px;
+            border: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: rgb(41, 206, 41);
+        }
+
+        span {
+            margin-right: 320px;
+            font-size: 20px;
+        }
+
+        .span1 {
+
+            margin-right: 0px;
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <span class="span1">Ticket Type Checker </span>
+
+            <span>Enter Your Age :</span><br>
+            <input id="input1" type="number" placeholder="Enter a number"><br>
+            <!-- <span>Enter The exponent :</span> -->
+            <!-- <input id="input2" type="number" placeholder="Enter a number"><br> -->
+
+            <button onclick="ticketType()">Check Ticket Type</button>
+            <div class="display" id="display"></div><br><br><br>
+        </div>
+    </div>
+
+    <script>
+
+        function ticketType() {
+            let ticket = document.getElementById("input1").value;
+
+            if (ticket >= 12) {
+                document.getElementById("display").innerHTML = "Adult Ticket 🧑🏻";
+            }
+
+            else {
+                document.getElementById("display").innerHTML = "Child Ticket 👶🏻";
+            }
+
+            document.getElementById("input1").value = "";
+        }
+    </script>
+</body>
+
+</html>
