@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Comparator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto;
+        }
+
+        .box {
+            width: 40%;
+            height: 80%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.295);
+            border-radius: 10px;
+
+
+        }
+
+        .display {
+            width: 80%;
+            height: 15%;
+            background-color: lightgreen;
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+            color: black;
+        }
+
+        input {
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+
+        button {
+            width: 80%;
+            height: 35px;
+            border: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: purple;
+        }
+
+        span {
+            margin-right: 320px;
+            font-size: 20px;
+        }
+
+        .span1 {
+
+            margin-right: 0px;
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <span class="span1">Score Comparator</span>
+
+            <span>Firsts  Score :</span>
+            <input id="input1" type="number" placeholder="Enter a number"><br>
+            <span>Second Score :</span>
+            <input id="input2" type="number" placeholder="Enter a number"><br>
+
+            <button onclick="EvenOrOdd()">Compare Score</button>
+            <div class="display" id="display"></div><br><br><br>
+        </div>
+    </div>
+
+    <script>
+
+        function EvenOrOdd(){
+           
+            let user1 = document.getElementById("input1").value;
+            let user2 = document.getElementById("input2").value;
+
+            if(user1 >= user2){
+                document.getElementById("display").innerHTML = user1;
+            }
+            else{
+                document.getElementById("display").innerHTML = user2;
+            }
+        }
+    </script>
+</body>
+
+</html>
