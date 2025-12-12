@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 60%;
+            height: 60%;
+            background-color: white;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+        }
+
+        input{
+            width: 70%;
+            height: 8%;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+
+        label{
+            /* margin-right: 55%; */
+            font-size: 120%;
+        }
+
+        button{
+            width: 60%;
+            height: 8%;
+            border-radius: 5px;
+            border: none;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <span style="font-size: 210%;">Welcome To Login</span><br><br><br>
+            <label>Enter Your Email</label><br><br>
+            <input id="input1" type="text" placeholder="Enter Your Email"><br><br>
+            <label>Enter Your Password</label><br><br>
+            <input id="input2" type="text" placeholder="Enter Your Password"><br><br><br>
+            <button onclick="loginwebpage()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function loginwebpage(){
+            const email = "sujal";
+            const pass = "123";
+            const username = "sujalpadoliya"
+
+            let Email = document.getElementById("input1").value;
+            let Pass = document.getElementById("input2").value;
+
+            let a = email == Email ;
+            let b = pass == Pass ;
+
+
+            if(a && b){
+                alert("Login Succesfull");
+            }
+            else{
+                alert("Enter Your Email or Pass ")
+            }
+
+        }
+    </script>
+</body>
+</html>
