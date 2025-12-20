@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week days </title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button onclick="getday()">click</button>
+    <script>
+        function getday(){
+            let d = document.getElementById("input1").value;
+
+            day = "";
+
+            if(d == 0 ){
+                day = "Sunday"
+            }
+            else if(d == 1 ){
+                day = "Monday"
+            }
+            else if(d == 2 ){
+                day = "Tuesday"
+            }
+            else if(d == 3 ){
+                day = "Wednesday"
+            }
+            else if(d == 4 ){
+                day = "Thuesday"
+            }
+            else if(d == 5 ){
+                day = "Friday"
+            }
+            else if(d == 6 ){
+                day = "Saturday"
+            }
+            else{
+                day = "in valid Number"
+            }
+            alert(day)
+        }
+    </script>
+</body>
+</html>
