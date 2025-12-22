@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teampreture Range Check</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 40%;
+            height: 80%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.295);
+            border-radius: 10px;
+
+
+        }
+
+        .display {
+            width: 80%;
+            height: 15%;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            font-size: 30px;
+            color: black;
+        }
+
+        input {
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+
+        button {
+            width: 80%;
+            height: 35px;
+            border: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            background-color: rgb(62, 62, 213);
+        }
+
+        span {
+            margin-right: 280px;
+            font-size: 20px;
+        }
+
+        .span1 {
+
+            margin-right: 0px;
+            font-size: 40px;
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <span class="span1">Electicity Bill Calculator</span>
+
+            <span>Enter Unit :</span><br>
+            <input id="input1" type="number" placeholder="Enter a number"><br>
+            <!-- <span>Enter The exponent :</span> -->
+            <!-- <input id="input2" type="number" placeholder="Enter a number"><br> -->
+
+            <button onclick="unitchecked()">Calculate Bill</button>
+            <div class="display" id="display"></div><br><br><br>
+        </div>
+    </div>
+
+    <script>
+
+        function unitchecked() {
+            let unit = document.getElementById("input1").value;
+            let result = 0
+
+            if (unit <= 50) {
+                result = unit * 7;
+
+            }
+            else if (unit <= 150) {
+                result = unit * 8;
+            }
+            else if (unit <= 250) {
+                result = unit * 12
+            }
+            else {
+                result = unit * 15
+            }
+             
+            perce = 0.20 * result;
+             
+            total = result + perce;
+
+            document.getElementById("display").innerHTML = total ;
+            
+
+
+        }
+    </script>
+</body>
+
+</html>

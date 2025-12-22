@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .main{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .display{
+        width: 20%;
+        height: 20%;
+        background-color: black;
+       text-align: center;
+       align-content: center;
+        font-size: 30px;
+        color: white;
+        
+        
+    }
+
+    p{
+        font-size: 30px;
+        /* margin-left: 30px; */
+    }
+
+    .buttons{
+        width: 20%;
+        height: 60%;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: row;
+       justify-items: center;
+        align-items: center;
+    
+    }
+
+    button{
+        width: 65px;
+        height: 65px;
+        border: none;
+        background-color: gray;
+        border-radius: 100px;
+        font-size: 20px;
+        color: white;
+    }
+
+    input{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+        font-size: 200%;
+        border: none;
+        display: none;
+    }
+
+    .call{
+       background-color: black; 
+       color: black;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <div  class="display" id="display">
+            <input type="text" name="" id="input" onclick="display()">
+            
+            <p id="display"></p>
+        </div>
+        <div class="buttons">
+            <button id="one" onclick="clickone()">1</button>
+            <button id="two" onclick="clicktwo()">2</br>abc</button>
+            <button id="three" onclick="clickthree()">3</br>def</button>
+            <button id="four" onclick="clickfour()">4</br>ghi</button>
+            <button id="five" onclick="clickfive()">5</br>jkl</button>
+            <button id="six" onclick="clicksix()">6</br>mno</button>
+            <button id="seven" onclick="clickseven()">7</br>pqrs</button>
+            <button id="eight" onclick="clickeight()">8</br>tuv</button>
+            <button id="nine" onclick="clicknine()">9</br>wxyz</button>
+            <button id="zero" onclick="clickzero()">0</br>+</button>
+            <button id="star" onclick="clickstar()">*</button>
+            <button id="#h" onclick="clickhaj()">#</button>
+            <button class="call" id="#h" onclick="clickhaj()">#</button>
+
+            <button  onclick="cheackedcallmessage()">click</button>
+            
+        </div>
+
+    </div>
+</body>
+<script>
+    alert("Enter your Service is 1 , 2 , 3 , 0")
+
+    function clickone(){
+        if(1 == 1 ){
+            document.getElementById("display").innerHTML += 1;
+            alert("Your current balance is : 299 </br> Your Total Data is : 1.50GB </br> Your Save Data is : 500MB </br> Balance Expire date is : 1-11-2025 ")
+        }
+        else(
+            alert("Wrong button click")
+        )
+    }
+
+    function clicktwo(){
+        if(2 == 2 ){
+            document.getElementById("display").innerHTML += 2;
+            alert("View More Balance : </br> 1st is : 209₹ </br> 2nd is : 299₹ </br> 3rd is : 349₹")
+        }
+        else(
+            alert("wrong button click")
+        )
+    }
+
+    function clickthree(){
+        if(3 == 3 ){
+            document.getElementById("display").innerHTML += 3;
+            alert("This over customer number : 1-8100-3825")
+        }
+        else(
+            alert("wrong button click")
+        )
+    }
+
+    function clickzero(){
+        if(2 == 0 ){
+            document.getElementById("display").innerHTML += 0;
+            alert("This over customer number : 1-8100-3825")
+        }
+        else(
+            alert("Exit over Call")
+        )
+    }
+
+
+    function display(){
+        
+    }
+    
+    
+
+   function cheackedcallmessage(){
+
+    let cheacked = Number(document.getElementById("input").value)
+    document.getElementById("input").style.display = "block"
+    
+    if(cheacked == 1){
+        alert("Your current balance is : 299 </br> Your Total Data is : 1.50GB </br> Your Save Data is : 500MB </br> Balance Expire date is : 1-11-2025 ")
+    }
+    else if(cheacked == 2 ){
+        alert("View More Balance : </br> 1st is : 209₹ </br> 2nd is : 299₹ </br> 3rd is : 349₹")
+    }
+    else if( cheacked == 3){
+        alert("This over customer number : 1-8100-3825")
+    }
+    else {
+    "Not Option is selected"
+    }
+
+   }
+</script>
+</html>
