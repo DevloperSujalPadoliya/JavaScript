@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light on / off toggle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-family: Roboto;
+            color: white;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            width: 30%;
+            background-color: white;
+            height: 70%;
+            border-radius: 10px;
+           
+            
+        }
+
+        .header{
+            width: 100%;
+            height: 20%;
+            background-color: rgba(0, 0, 0, 0.894);
+            text-align: center;
+            align-content: center;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .span1{
+            font-size: 180%;
+            font-weight: 600;
+        }
+
+        .para1{
+            font-size: 70%;
+        }
+
+        .img{
+            width: 100%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.894);
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons01{
+            width: 100%;
+            height: 10%;
+            background-color: rgba(0, 0, 0, 0.894);
+            gap: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn1{
+            width: 30%;
+            height: 80%;
+            border-radius: 25px;
+            border: none;
+            color: white;
+            background-color: blue;
+            background: linear-gradient( to bottom right , purple , blue , rgb(31, 70, 199));
+        }
+
+        .btn2{
+            width: 40%;
+            height: 45%;
+            border: none;
+            border-radius: 20px;
+            color: blue;
+            text-align: center;
+            align-content: center;
+            background-color: rgb(212, 237, 245);
+
+        }
+
+        .big-box{
+            width: 100%;
+            height: 30%;
+            background-color:rgba(0, 0, 0, 0.894);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .para2{
+            font-size: 80%;
+        }
+
+        .name1{
+
+            width: 80%;
+            height: 80%;
+            background-color:rgb(8, 8, 50);
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+            
+        }
+       
+
+       
+    </style>
+</head>
+<body>
+    <div class="main" id="big">
+        <div class="box">
+            <div class="header" id="box1"><span class="span1">Light ON / OFF Toggle </span><p class="para1">A Clean, interactive demonstration of light state <br>Switching</p></div>
+            <div class="img" id="box2"><img id="image1" src="https://pngimg.com/d/bulb_PNG1243.png" width="50%" height="100%" alt=""></div>
+            <div class="buttons01" id="box3" ><button class="btn1" onclick="bulbon()">⏻ Turn ON</button> 
+            <button class="btn2">💡 light is currently OFF</button></div>
+            <div class="big-box" id="box4"><div class="name1" id="box5"><span><b>How To use</b></span>
+                <p class="para2">Click the button above to toggle the light between ON and OFF states. Observe how the bulb changes visually and how the page adapts to each state</p></div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+function bulbon(){
+    document.getElementById("big").style.background = "whitesmoke"
+    document.getElementById("image1").src = "https://www.freeiconspng.com/thumbs/lightbulb-png/light-bulb-png-bulb-png1247-12.png"
+    document.getElementById("box1").style.background = "white"
+    document.getElementById("box1").style.color = "black"
+    document.getElementById("box2").style.background = "white"
+    document.getElementById("box3").style.background = "white"
+    document.getElementById("box4").style.background = "white"
+    document.getElementById("box5").style.background = "grey"
+}
+    </script>
+</body>
+</html>
+
+<!-- https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSaid_4RYtltEqLboG7VbIlPnRPtU0KobWttQTjqVKW51zVuyVR -->
