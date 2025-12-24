@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+</head>
+<body>
+    <label>Doctor is present :</label><br>
+    <input type="radio" id="doctor1"><label>yes</label>
+    <input type="radio" id="doctor2"><label>no</label><br><br>
+
+    <label>Patient Registered :</label><br>
+    <input type="radio" id="doctor3"><label>yes</label>
+    <input type="radio" id="doctor4"><label>no</label>
+    <br><br>
+
+    <label>Payment  :</label><br>
+    <input type="radio" id="doctor5"><label>yes</label>
+    <input type="radio" id="doctor6"><label>no</label>
+    <button onclick="doctorpresent()">submit</button>
+
+    <script>
+      let   pation = ""
+        function doctorpresent(){
+           
+            if(document.getElementById("doctor1").checked){
+                if(document.getElementById("doctor3").checked){
+                    if(document.getElementById("doctor5").checked){
+                        alert("Appoinment is book")
+                    }
+                    else{
+                        alert("payment is not pay")
+                    }
+                }
+                else{
+                    alert("Not Registred")
+                }
+                
+            }
+            else{
+                alert("Appoinment is not Book")
+            }
+        }
+
+    </script>
+</body>
+</html>
