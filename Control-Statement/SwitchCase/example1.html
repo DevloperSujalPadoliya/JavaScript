@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch Case </title>
+</head>
+<body>
+    <script>
+        let time = prompt("Enter the Time")
+        // if(time <= 5 || time <=11){
+        //     alert("Good morning")
+        // }else if(time <= 12 || time <= 17){
+        // alert("good afternone");
+           
+        // }else{
+        //     alert("no day")
+        // }
+
+
+        switch(true){
+            case (time >= 5 || time <=11):time
+            alert("Good Morning")
+            break;
+
+            case(time >= 12 || time <= 17):
+            alert("Good Afternone")
+            break;
+
+             case(time >= 18 || time <=21):
+            alert("Good Evening")
+            break;
+
+             case(time >= 21 && time <= 24 || time <=0 && time <= 4):
+            alert("Good ninght")
+            break;
+            default:
+                alert("please enter valid time")
+        }
+    </script>
+</body>
+</html>
