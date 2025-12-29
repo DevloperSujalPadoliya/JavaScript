@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="smallpizza()">samll pizza 150</button>
+    <button onclick="mediumpizza()">medium pizza 250</button>
+    <button onclick="largepizza()">large pizza 350</button>
+
+    <button onclick="getpizza()">click</button>
+
+    <!-- <script>
+       let pizzaprice = 0;
+       function getpizza(){
+      
+         switch(true){
+            case  150:
+            alert("small" + pizzaprice)
+            break;
+
+            case 250:
+            alert("medium" + pizzaprice)
+            break;
+
+             case 350:
+            alert("large" + pizzaprice)
+            break;
+
+            default:
+                alert("please enter valid time")
+         }
+
+         function smallpizza(){
+            pizzaprice =150;
+            getpizza()
+         }
+         function mediumpizza(){
+            pizzaprice =250;
+            getpizza()
+         }
+         function largepizza(){
+            pizzaprice =350;
+            getpizza()
+         }
+       }
+    </script> -->
+    <script>
+    let pizzaprice = 0;
+
+    function getpizza() {
+        switch (pizzaprice) {
+            case 150:
+                alert("Small Pizza Price: " + pizzaprice);
+                break;
+
+            case 250:
+                alert("Medium Pizza Price: " + pizzaprice);
+                break;
+
+            case 350:
+                alert("Large Pizza Price: " + pizzaprice);
+                break;
+
+            default:
+                alert("Please select a valid pizza");
+        }
+    }
+
+    function smallpizza() {
+        pizzaprice = 150;
+        getpizza();
+    }
+
+    function mediumpizza() {
+        pizzaprice = 250;
+        getpizza();
+    }
+
+    function largepizza() {
+        pizzaprice = 350;
+        getpizza();
+    }
+</script>
+
+
+   
+
+
+</body>
+</html>
