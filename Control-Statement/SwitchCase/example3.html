@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie ticket</title>
+</head>
+<body>
+    <script>
+
+        let movie = prompt("enter your age")
+        let price = ""
+
+         switch(true){
+            case (movie >= 0 && movie <=12):
+            alert("child" +" " + movie + " "+  "year" + "</br>" + "Ticket Price : 100$")
+            break;
+
+            case(movie >= 13 && movie <= 19):
+            alert("Teen" +" " + movie + " "+  "year" + "</br>" + "Ticket Price : 150$")
+            break;
+
+             case(movie >= 20 && movie <=59):
+           alert("Adoult" +" " + movie + " "+  "year" + "</br>" + "Ticket Price : 200$")
+            break;
+
+             case(movie >= 61 ):
+            alert("Senior" +" " + movie + " "+  "year" + "</br>" + "Ticket Price : 120$")
+            break;
+            default:
+                alert("please enter valid movie")
+        }
+    </script>
+</body>
+</html>
