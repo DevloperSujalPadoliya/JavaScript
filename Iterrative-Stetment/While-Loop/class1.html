@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inside the while loop in while loop</title>
+</head>
+<body>
+    <script>
+        let i = 1;
+        let n = 7;
+        let j = 1;
+        let m = 3;
+
+        let count = 0;
+
+        while(i <= n){
+            console.log(i);
+            let j = 1;
+            while(j <= m){
+                console.log(j + "*");
+                j++
+                count++
+            }
+            i++
+            
+        }
+        alert(count)
+
+    </script>
+</body>
+</html>
