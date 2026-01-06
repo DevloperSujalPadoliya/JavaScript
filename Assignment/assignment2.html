@@ -81,32 +81,47 @@
     </div>
 
     <script>
-       
-        ison = true
-        function onlineoffline(){
-          
-            let online = document.getElementById("off")
-            let toggle = document.getElementById("no")
-            let circle = document.getElementById("circle")
+         let bgcolor1 = "red";
+        let bgcolor12 = "red";
+        let bgcolor123 = "red";
+        // let button2 = "turn off";
+        let textcolor = "Offline"
+        let textcolor1 = "No Internet Connection"
 
-            if(ison){
-                online.style.color = "red";
-                toggle.style.color = "red";
-                circle.style.backgroundColor = "red";
-                ison = false;
-                
-               
-                
+         
+        document.getElementById("off").style.color = bgcolor1;
+       
+         document.getElementById("no").style.color = bgcolor12;
+          document.getElementById("circle").style.backgroundColor = bgcolor123;
+           document.getElementById("off").innerHTML = textcolor;
+            document.getElementById("no").innerHTML = textcolor1;
+       
+
+        function onlineoffline(){
+            if(button2 = "turn off"){
+                bgcolor1 = "green"
+                bgcolor12 = "green"
+                bgcolor123 = "green"
+                textcolor = "Online"
+                textcolor1 = "Conected to the internet"
+
             }
             else{
-                online.style.color = "green";
-                toggle.style.color = "green";
-                 circle.style.backgroundColor = "green";
-                 ison = true
+                bgcolor1 = "red"
+                bgcolor12 = "red"
+                 bgcolor123 = "red"
+                 textcolor = "Offline"
+                 textcolor1 = "No Internet Connection"
             }
-            
+
+             document.getElementById("off").style.color = bgcolor1;
+              document.getElementById("no").style.color = bgcolor12;
+               document.getElementById("circle").style.backgroundColor = bgcolor123;
+               document.getElementById("off").innerHTML = textcolor;
+                           document.getElementById("no").innerHTML = textcolor1;
+
         }
-      
+        // location.reload()
     </script>
 </body>
 </html>

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>light on / off toggle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <style>
-        body{
+        body {
             padding: 0px;
             margin: 0px;
             font-family: Roboto;
             color: white;
         }
-        .main{
+
+        .main {
             width: 100vw;
             height: 100vh;
             background-color: #1c2143;
@@ -23,16 +26,16 @@
             align-items: center;
         }
 
-        .box{
+        .box {
             width: 30%;
             background-color: white;
             height: 70%;
             border-radius: 10px;
-           
-            
+
+
         }
 
-        .header{
+        .header {
             width: 100%;
             height: 20%;
             background-color: #1e1b2c;
@@ -42,16 +45,16 @@
             border-top-left-radius: 10px;
         }
 
-        .span1{
+        .span1 {
             font-size: 180%;
             font-weight: 600;
         }
 
-        .para1{
+        .para1 {
             font-size: 70%;
         }
 
-        .img{
+        .img {
             width: 100%;
             height: 40%;
             background-color: #1e1b2c;
@@ -59,7 +62,7 @@
             justify-content: center;
         }
 
-        .buttons01{
+        .buttons01 {
             width: 100%;
             height: 10%;
             background-color: #1e1b2c;
@@ -69,17 +72,17 @@
             align-items: center;
         }
 
-        .btn1{
+        .btn1 {
             width: 30%;
             height: 80%;
             border-radius: 25px;
             border: none;
             color: white;
             background-color: blue;
-            background: linear-gradient( to bottom right , purple , blue , rgb(31, 70, 199));
+            background: linear-gradient(to bottom right, purple, blue, rgb(31, 70, 199));
         }
 
-        .btn2{
+        .btn2 {
             width: 40%;
             height: 50%;
             border: solid 1px;
@@ -91,10 +94,10 @@
 
         }
 
-        .big-box{
+        .big-box {
             width: 100%;
             height: 30%;
-            background-color:#1e1b2c;
+            background-color: #1e1b2c;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -103,57 +106,86 @@
 
         }
 
-        .para2{
+        .para2 {
             font-size: 80%;
-           
+
         }
 
-        .name1{
+        .name1 {
 
             width: 80%;
             height: 80%;
-            background-color:rgb(8, 8, 50);
+            background-color: rgb(8, 8, 50);
             text-align: center;
             align-content: center;
             border-radius: 10px;
-            
-        }
-       
 
-       
+        }
     </style>
 </head>
+
 <body>
     <div class="main" id="big">
-        <div class="box">
-            <div class="header" id="box1"><span class="span1">Light ON / OFF Toggle </span><p class="para1">A Clean, interactive demonstration of light state <br>Switching</p></div>
-            <div class="img" id="box2"><img id="image1" src="https://cliply.co/wp-content/uploads/2019/06/371906590_RESPONSIVE_SMARTPHONE_400.png" width="50%" height="100%" alt=""></div>
-            <div class="buttons01" id="box3" ><button class="btn1" onclick="bulbon()" id="btn1">⏻ Turn ON</button> 
-            <button class="btn2" onclick="bulboff()" id="btn2">💡 light is currently OFF</button></div>
-            <div class="big-box" id="box4"><div class="name1" id="box5"><span><b>How To use</b></span>
-                <p class="para2">Click the button above to toggle the light between ON and OFF states. Observe how the bulb changes visually and how the page adapts to each state</p></div>
-        </div>
+        <div class="box" id="container">
+            <div class="header" id="box1"><span class="span1">Light ON / OFF Toggle </span>
+                <p class="para1">A Clean, interactive demonstration of light state <br>Switching</p>
+            </div>
+            <div class="img" id="box2"><img id="image1"
+                    src="https://cliply.co/wp-content/uploads/2019/06/371906590_RESPONSIVE_SMARTPHONE_400.png"
+                    width="50%" height="100%" alt=""></div>
+            <div class="buttons01" id="box3"><button class="btn1" onclick="bulbon()" id="btn1">⏻ Turn ON</button>
+                <button class="btn2" onclick="bulboff()" id="btn2">💡 light is currently OFF</button>
+            </div>
+            <div class="big-box" id="box4">
+                <div class="name1" id="box5"><span><b>How To use</b></span>
+                    <p class="para2">Click the button above to toggle the light between ON and OFF states. Observe how
+                        the bulb changes visually and how the page adapts to each state</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
+        let bgcolor1 = "#1c2143";
+        let bgcolor12 = "#1e1b2c";
+        let bgcolor123 = "black";
+        let button2 = "turn off";
+        // let textcolor = "white"
+        let img = "https://cliply.co/wp-content/uploads/2019/06/371906590_RESPONSIVE_SMARTPHONE_400.png";
 
-let ison = true;
- function bulbon(){
-    ison =! ison;
+        document.getElementById("big").style.backgroundColor = bgcolor1;
+        document.getElementById("box1").style.backgroundColor = bgcolor12;
+        document.getElementById("box1").style.color = bgcolor123;
+        document.getElementById("box2").style.backgroundColor = bgcolor12;
+        document.getElementById("box3").style.backgroundColor = bgcolor12;
+        document.getElementById("box4").style.backgroundColor = bgcolor12;
+        document.getElementById("box5").style.backgroundColor = bgcolor12;
+         document.getElementById("box5").style.color = bgcolor123;
+        document.getElementById("btn1").style.backgroundColor = button2;
 
-    document.getElementById("big").style.background = ison ? "whitesmoke" : "#1c2143" ; document.getElementById("image1").src = ison ? "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSaid_4RYtltEqLboG7VbIlPnRPtU0KobWttQTjqVKW51zVuyVR":
-    "https://cliply.co/wp-content/uploads/2019/06/371906590_RESPONSIVE_SMARTPHONE_400.png";
-    document.getElementById("box1").style.background = ison ? "white" : "#1e1b2c";
-    document.getElementById("box1").style.color =ison? "black" : "white";
-    document.getElementById("box2").style.background = ison ? "white" : "#1e1b2c";
-    document.getElementById("box3").style.background = ison ?"white" : "#1e1b2c";
-    document.getElementById("box4").style.background = ison? "white":"#1e1b2c";
-    document.getElementById("box5").style.background = ison? "grey" : "rgb(8, 8, 50)"
- }
 
+        function bulbon(){
+            button2 == "turn off"? bgcolor1 = "whitesmoke" : "#1c2143";
+            button2 == "turn off"? bgcolor12 = "white" : "#1e1b2c";
+            button2 == "turn off"? bgcolor123 = "black" : "white" ;
+             button2 == "turn off"? bgcolor123 = "black" : "white" ;
+           
+
+            document.getElementById("big").style.backgroundColor = bgcolor1;
+        document.getElementById("box1").style.backgroundColor = bgcolor12;
+        document.getElementById("box2").style.backgroundColor = bgcolor12;
+        document.getElementById("box3").style.backgroundColor = bgcolor12;
+        document.getElementById("box4").style.backgroundColor = bgcolor12;
+        document.getElementById("box5").style.backgroundColor = bgcolor12;
+         
+         document.getElementById("box5").style.color = bgcolor123;
+         console.log(1);
+         
+
+            
+        }
 
     </script>
 </body>
-</html>
 
+</html>
