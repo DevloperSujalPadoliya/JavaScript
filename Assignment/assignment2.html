@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 30%;
+            height: 70%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .span1 {
+            font-size: 150%;
+            font-weight: 600;
+        }
+
+        .para1 {
+            font-size: 90%;
+        }
+
+        .image {
+            width: 80%;
+            height: 30%;
+            background-color: rgb(180, 180, 180);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 60%;
+            height: 7%;
+            border-radius: 20px;
+            border: solid 1px;
+            font-size: 90%;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 100%;
+        }
+
+        .para2 {
+            color: red;
+            font-size: 100%;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <span class="span1">Connection Status</span>
+            <p class="para1">Toggle between online and other modes to see the visual change</p>
+            <div class="image">
+                <div class="circle" id="circle"></div>
+                <p id="off" class="para2">Offline</p>
+                <p id="no" class="para2">No Internet Connection</p>
+            </div><br>
+            <button onclick="online()">Switch to Online</button>
+        </div>
+    </div>
+
+    <script>
+        let bgcolor1 = "red";
+        let bgcolor12 = "red";
+        let bgcolor123 = "red";
+        let button2 = "turn off";
+        let textcolor = "Offline";
+        let textcolor1 = "No Internet Connection";
+
+
+        document.getElementById("off").style.color = bgcolor1;
+
+        document.getElementById("no").style.color = bgcolor12;
+        document.getElementById("circle").style.backgroundColor = bgcolor123;
+        document.getElementById("off").innerHTML = textcolor;
+        document.getElementById("no").innerHTML = textcolor1;
+
+
+        function online() {
+            if(button2 == "turn off"){
+                bgcolor1 = "green"
+                bgcolor12 = "green"
+                bgcolor123 = "green"
+                textcolor = "Online"
+                textcolor1 = "Conected to the internet"
+                button2 ="turn off"
+
+            }
+            else {
+                bgcolor1 = "red"
+                bgcolor12 = "red"
+                bgcolor123 = "red"
+                textcolor = "Offline"
+                textcolor1 = "No Internet Connection"
+                button2 ="turn on"
+            }
+
+            document.getElementById("off").style.color = bgcolor1;
+            document.getElementById("no").style.color = bgcolor12;
+            document.getElementById("circle").style.backgroundColor = bgcolor123;
+            document.getElementById("off").innerHTML = textcolor;
+            document.getElementById("no").innerHTML = textcolor1;
+
+        }
+    </script>
+</body>
+
+</html>
