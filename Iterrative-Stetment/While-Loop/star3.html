@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="star"></p> -->
+    <h1 id="star"></h1>
+
+    <script>
+        let i = 0;
+        let m = 122;
+
+
+
+
+
+        // while (i <= m) {
+        //     // console.log(i );
+        //     let row = "1 "
+        //     // document.getElementById("star").innerHTML += "*";
+        //     let j = 1
+        //     while (j <= i) {
+        //         // console.log(j + "*");
+        //         row += "1" + " "
+
+        //         j++
+        //     }
+
+        //     console.log(row);
+        //     document.getElementById("star").innerHTML += row + "<br/>"
+
+
+        //     i++
+
+        // }
+
+         while (i <= m) {
+            // console.log(i );
+            let row = ""
+            // document.getElementById("star").innerHTML += "*";
+            let j = 1
+            while (j <= i) {
+                // console.log(j + "*");
+                row += i + " "
+
+                j++
+            }
+
+            console.log(row);
+            document.getElementById("star").innerHTML += row + "<br/>"
+
+
+            i++
+
+        }
+
+       
+
+    </script>
+</body>
+
+</html>
