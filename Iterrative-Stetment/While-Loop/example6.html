@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><p id="star"></p>
+<script>
+    let i = 1;
+    let n = 7;
+    while(i <= n){
+        let j = 1;
+        row = " ";
+        while(j <= n){
+            if(j == 1 || j == 7 || i == 7 || i == 1){
+                row += "*";
+            }
+            else{
+                row +=" ";
+               
+            }
+             j++
+        }
+        document.getElementById("star").innerHTML +=row + "<br/>"
+
+        console.log(row);
+        i++
+        // # use trangle in empty # 
+    }
+</script>    
+</body>
+</html>
