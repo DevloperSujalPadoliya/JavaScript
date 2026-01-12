@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre id="star"></pre>
+
+    <script>
+
+        let a = 1;
+        let x = 7;
+
+        while (a <= x) {
+            let row = "";
+            let b = 1;
+            while (b <= x - a) {
+                row += " "
+                b++
+            }
+            let c = 1;
+            while (c <= a) {
+                row += " *";
+                c++
+            }
+            console.log(row);
+
+            a++
+        }
+        let i = 1;
+        let n = 7;
+
+        while (i <= n) {
+            let row = "";
+            let j = 1;
+            while (j <= i - 1) {
+                row += " "
+                j++
+            }
+            let k = 1;
+            while (k <= n - i + 1) {
+                row += " *";
+                k++
+            }
+            console.log(row);
+
+            i++
+        }
+    </script>
+</body>
+
+</html>

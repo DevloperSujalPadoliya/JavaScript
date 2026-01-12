@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre id="star"></pre>
+
+    <script>
+
+        // let a = 1;
+        // let x = 7;
+
+        // while (a <= x) {
+        //     let row = "";
+        //     let b = 1;
+        //     while (b <= x - a) {
+        //         row += " "
+        //         b++
+        //     }
+        //     let c = 1;
+        //     while (c <= a) {
+        //         row += " *";
+        //         c++
+        //     }
+        //     console.log(row);
+
+        //     a++
+        // }
+        let n = 5
+
+        for(let i = 1 ;  i <= n ; i++ ){
+            let row = ""  ;
+
+            for(let j = 1 ; j <= (n-i) ; j++){
+                
+                row += "  ";
+                // document.getElementById("star").innerHTML += row + "<br/>"
+                
+            }
+            for(let k = 1 ; k <= 2 * i - 1; k++){
+                if((k==1) || (k == 2 * i - 1)){
+                    row += "* ";
+                }
+                else{
+                    row += "  ";
+                }
+            }
+            console.log(row);
+            
+            document.getElementById("star").innerHTML += row
+        }
+    </script>
+</body>
+
+</html>
