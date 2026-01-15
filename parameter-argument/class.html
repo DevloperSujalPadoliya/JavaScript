@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+        }
+        .main{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* display: flex; */
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="main" id="display"></div>
+    <button onclick="inputNumber()">click</button>
+    <script>
+      function inputNumber(){
+        let n1 = prompt("Enter the number 1 :")
+        let n2 = prompt("Enter the number 2 :")
+        addNumber(n1, n2)
+      }
+
+      function addNumber(pranay,sujal){
+        // inputNumber()
+       printstri(pranay,sujal)
+        
+        let sum = Number(pranay) + Number(sujal)
+        console.log(sum);
+        
+      }
+
+      function printstri(p,s){
+        console.log("pranay is : " + p);
+        console.log("sujal is : " + s);
+      }
+    </script>
+</body>
+</html>
