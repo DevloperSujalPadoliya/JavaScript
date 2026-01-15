@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse right side trangle</title>
+</head>
+<body>
+    <pre id="para"></pre>
+    <script>
+        let i = 1;
+        let n = 5;
+
+        while (i <= n) {
+            let row = "";
+            
+            let j = 5;
+            while (j >= i) {
+                row += "*"
+                j--
+            }
+
+            let s = 1;
+            while (s > n) {
+                row += " "
+                s++
+            }
+            
+            console.log(row);
+            document.getElementById("para").innerHTML += row + "<br/>"
+            
+            i++
+        }
+
+    </script>
+</body>
+</html>

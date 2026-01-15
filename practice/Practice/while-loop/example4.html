@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example 4</title>
+    <title>Find the prime number</title>
 </head>
 <body>
     <script>
         let i = 1;
-        // let n = 9;
-        let sum = 0;
+        let n = 10;
+        let a = prompt("Enter the number")
 
-        while(i <= 10   ){
-            console.log(i);
-            
-          sum = sum + i 
-          i++
+        while(i <= n){
+            if(a % 2  == 0){
+                console.log(a + " This is The prime number : ");
+                
+            }
+            else{
+                console.log(a  + " Not prime Number : ");
+                
+            }
+            // break;
+            i++
         }
-        console.log( "Sum is 1 to 10 : " + sum);
     </script>
 </body>
 </html>

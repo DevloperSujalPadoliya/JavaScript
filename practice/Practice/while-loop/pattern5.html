@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 97 ;
+        let n = 5;
+        let k = 1
+
+        while(k <= n){
+            let row = "";
+            let j = 1;
+            while(j <= k){
+                let a = String.fromCharCode(i)
+                row += a;
+                j++
+            }
+            console.log(row);
+            k++
+            i++
+        }
+    </script>
+</body>
+</html>

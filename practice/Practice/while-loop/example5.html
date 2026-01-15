@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example 5</title>
+    <title>prime number upto 1 to 100</title>
 </head>
 <body>
     <script>
-        let i = 11;
-        let n = 1;
+        let i = 1;
+        let n = 100;
 
-        while(i >= n){
-            i--;
-            console.log(i);
+        while(i <= n){
+            if (i % 2 == 0) {
+                console.log(i + "This is prime number ");
                 
+            }
+            else{
+                console.log(i);
+                
+            }
+            i++
         }
     </script>
 </body>
