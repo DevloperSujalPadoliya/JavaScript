@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+       let i = 1;
+       let n = 10;
+
+       let x  = 0;
+       let y = 1;
+       console.log(x);
+       console.log(y);
+       
+
+       while(i <= n){
+        let next = x + y;
+        console.log( y  + "+" + x + "=" +next);
+        document.getElementById("display").innerHTML += i+  " => " +y  + "+" + x + "=" +next + "<br/>"
+        x = y
+        y = next
+        
+        
+        i++
+
+       }
+
+    
+    </script>
+</body>
+</html>
