@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My simple carousel</h2>
+    <div class="main">
+        <button onclick="back()"> <- back </button>
+                <img id="image"
+                    src="https://img.freepik.com/free-photo/abstract-flowing-neon-wave-background_53876-101942.jpg?semt=ais_user_personalization&w=740&q=80"
+                    alt="" width="300px" height="">
+                <button onclick="next()">next -></button>
+    </div>
+    <script>
+        let image1 = "https://img.freepik.com/free-photo/abstract-flowing-neon-wave-background_53876-101942.jpg?semt=ais_user_personalization&w=740&q=80"
+        let image2 = "https://png.pngtree.com/thumb_back/fh260/background/20240919/pngtree-a-background-of-orange-blue-and-yellow-gradients-with-gritty-appearance-image_16233934.jpg"
+        let image3 = "https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg"
+
+        let images = [image1, image2, image3]
+
+        let i = 0;
+        function next() {
+            i++
+            if(i >= images.length){
+                i = 0
+            }
+            document.getElementById("image").src = images[i];
+
+        }
+
+        // let j = 0
+        function back(){
+
+            i--
+            if(i <= 0){
+                i = images.length-1
+            }
+
+            document.getElementById("image").src = images[i];
+
+        }
+
+      setInterval(function(){
+        next()
+      }, 2000)
+    </script>
+</body>
+
+</html>
