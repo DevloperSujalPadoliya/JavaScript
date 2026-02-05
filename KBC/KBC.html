@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Quize</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: Roboto;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            background-color: lightgreen;
+            /* background-image: linear-gradient(to bottom right, purple, blue, purple); */
+            background-image: url(https://img.freepik.com/premium-vector/neon-sign-quiz-time-with-brick-wall-background-vector_118419-4414.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+
+        }
+
+        .header {
+            width: 100%;
+            height: 10%;
+            background-color: rgba(173, 216, 230, 0);
+            display: flex;
+        }
+
+        .logo {
+            width: 6%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0);
+            border-radius: 200px;
+        }
+
+        .space {
+            width: 25%;
+            height: 100%;
+            /* background-color: lightcoral; */
+        }
+
+        .score {
+            width: 25%;
+            height: 100%;
+            /* background-color: lightgrey; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .scores {
+            width: 80%;
+            height: 50%;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            align-content: center;
+            font-size: 140%;
+            font-weight: 600;
+        }
+
+        .name {
+            width: 44%;
+            height: 100%;
+            /* background-color: lightseagreen; */
+            display: flex;
+
+        }
+
+        .box {
+            width: 25%;
+            /* background-color: red; */
+            height: 100%;
+            text-align: center;
+            align-content: center;
+            /* border: solid 1px black; */
+        }
+
+        .btn1 {
+            width: 70%;
+            height: 50%;
+            border-radius: 20px;
+            font-size: 20px;
+            border: 1px solid;
+
+        }
+
+        .box1 {
+            width: 100%;
+            height: 90%;
+            /* background-color: orange; */
+        }
+
+        .quesion {
+            width: 100%;
+            height: 10%;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .que {
+            width: 50%;
+            height: 90%;
+            background-color: white;
+            border: 1px solid;
+            border-radius: 10px;
+            text-align: center;
+            align-content: center;
+            /* background-image: linear-gradient(red, black); */
+        }
+
+        .answer {
+            width: 100%;
+            height: 50%;
+            /* background-color: aliceblue; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            /* text-align: center;
+            align-content: center; */
+        }
+
+        .btn2 {
+            width: 70%;
+            height: 30%;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 110%;
+        }
+
+        .image {
+            height: 40%;
+            width: 100%;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image1 {
+            width: 40%;
+            height: 100%;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="logo"><img src="./assets/image/kbc-logo-removebg-preview.png" alt="" width="100%" height="100%">
+            </div>
+            <div class="space"></div>
+            <div class="score">
+                <div class="scores" id="scores">0</div>
+            </div>
+            <div class="name">
+                <div class="box"><button class="btn1">50:50</button></div>
+                <div class="box"><button class="btn1">📞</button></div>
+                <div class="box"><button class="btn1"><img src="https://cdn-icons-png.flaticon.com/128/33/33308.png"
+                            alt="" width="35%" height="80%"></button></div>
+                <div class="box"><button class="btn1">🔄</button></div>
+            </div>
+        </div>
+
+        <div class="box1">
+            <div class="image">
+                <!-- <div class="image1"><img src="https://i.zoomtventertainment.com/media/kBC_13.JPG" alt="" width="100%"
+                        height="100%"></div> -->
+            </div>
+            <div class="quesion">
+                <div class="que" id="quesion1"></div>
+            </div>
+            <div class="answer">
+                <button class="btn2" id="answer1" onclick="oneanswer1()">1</button>
+                <button class="btn2" id="answer2" onclick="oneanswer2()">2</button>
+                <button class="btn2" id="answer3" onclick="oneanswer3()">3</button>
+                <button class="btn2" id="answer4" onclick="oneanswer4()">4</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let quesion = ["What does HTML stand for?",
+           
+        ]
+        let result1 = quesion[0]
+
+        let answer = [
+           
+           "Hot Typing Markup Language",
+            "Hyper Text Markup Language",
+            "Home Typing Modern Language",
+            "Home Testing Mixed Language",
+
+    ]
+        let result = answer[1]
+        console.log(result);
+        
+    let  choesoption = ""
+
+
+        function outputinput(){
+
+            document.getElementById("quesion1").innerText = quesion[0]
+
+            document.getElementById("answer1").innerText = answer[0];
+              document.getElementById("answer2").innerText = answer[1];
+                document.getElementById("answer3").innerText = answer[2];
+                  document.getElementById("answer4").innerText = answer[3];
+        }
+
+        
+outputinput()
+        
+            
+         function oneanswer2(){
+            if(result1 == result == 0){
+                alert("Your answer is correct")
+                document.getElementById("score").innerText += 2;
+            }
+            else if(result1 != result){
+                alert("not")
+            }
+         }
+
+
+    </script>
+</body>
+
+</html>
