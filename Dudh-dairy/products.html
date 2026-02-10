@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all Dudh Dairy products - Fresh milk, dahi, paneer and more. Premium quality dairy products.">
+    <title>All Products - Dudh Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🥛</div>
+                <span>Dudh Dairy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Products</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Page -->
+    <section class="products-page">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" checked onchange="filterProducts('all')">
+                            <span>All Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" onchange="filterProducts('milk')">
+                            <span>Milk</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" onchange="filterProducts('dahi')">
+                            <span>Dahi (Yogurt)</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" onchange="filterProducts('paneer')">
+                            <span>Paneer</span>
+                        </label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span>Under ₹100</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span>₹100 - ₹300</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span>₹300 - ₹500</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span>Over ₹500</span>
+                        </label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Availability</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" checked>
+                            <span>In Stock</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox">
+                            <span>Pre Order</span>
+                        </label>
+                    </div>
+                    
+                    <button class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Clear Filters</button>
+                </aside>
+                
+                <!-- Products Main -->
+                <div class="products-main">
+                    <div class="products-sort">
+                        <p><strong>Showing all products</strong></p>
+                        <select onchange="sortProducts(this.value)">
+                            <option value="default">Sort by: Default</option>
+                            <option value="low">Price: Low to High</option>
+                            <option value="high">Price: High to Low</option>
+                            <option name="popular">Most Popular</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <!-- Milk Products -->
+                        <div class="product-card" data-category="milk" data-product-id="1">
+                            <div class="product-image">
+                                <span class="icon">🥛</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Bestseller</span>
+                                <h3>Fresh Cow Milk</h3>
+                                <p>Pure, nutrient-rich cow milk delivered fresh every morning.</p>
+                                <div class="product-price">
+                                    <span class="price">₹60/L</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="milk" data-product-id="2">
+                            <div class="product-image">
+                                <span class="icon">🥛</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Popular</span>
+                                <h3>Buffalo Milk</h3>
+                                <p>Rich and creamy buffalo milk, perfect for making sweets.</p>
+                                <div class="product-price">
+                                    <span class="price">₹80/L</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="milk" data-product-id="7">
+                            <div class="product-image">
+                                <span class="icon">🥛</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Organic</span>
+                                <h3>Organic A2 Milk</h3>
+                                <p>Pure A2 milk from indigenous cows. Easy to digest.</p>
+                                <div class="product-price">
+                                    <span class="price">₹120/L</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="milk" data-product-id="8">
+                            <div class="product-image">
+                                <span class="icon">🥛</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Skimmed</span>
+                                <h3>Toned Milk</h3>
+                                <p>Perfect for health-conscious individuals. Low fat.</p>
+                                <div class="product-price">
+                                    <span class="price">₹55/L</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dahi Products -->
+                        <div class="product-card" data-category="dahi" data-product-id="3">
+                            <div class="product-image">
+                                <span class="icon">🥣</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Fresh</span>
+                                <h3>Traditional Dahi</h3>
+                                <p>Creamy, tangy dahi made the traditional way.</p>
+                                <div class="product-price">
+                                    <span class="price">₹50/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="dahi" data-product-id="5">
+                            <div class="product-image">
+                                <span class="icon">🥣</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Special</span>
+                                <h3>Flavored Dahi</h3>
+                                <p>Delicious fruit-flavored dahi - Mango, Strawberry & more.</p>
+                                <div class="product-price">
+                                    <span class="price">₹60/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="dahi" data-product-id="9">
+                            <div class="product-image">
+                                <span class="icon">🥣</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Premium</span>
+                                <h3>Greek Yogurt</h3>
+                                <p>Thick and creamy Greek-style yogurt. High protein.</p>
+                                <div class="product-price">
+                                    <span class="price">₹80/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="dahi" data-product-id="10">
+                            <div class="product-image">
+                                <span class="icon">🥣</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Raita</span>
+                                <h3>Boondi Raita</h3>
+                                <p>Traditional boondi raita - perfect accompaniment for biryani.</p>
+                                <div class="product-price">
+                                    <span class="price">₹70/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Paneer Products -->
+                        <div class="product-card" data-category="paneer" data-product-id="4">
+                            <div class="product-image">
+                                <span class="icon">🧀</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Premium</span>
+                                <h3>Fresh Paneer</h3>
+                                <p>Soft, fresh paneer made from pure milk.</p>
+                                <div class="product-price">
+                                    <span class="price">₹350/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="paneer" data-product-id="6">
+                            <div class="product-image">
+                                <span class="icon">🧀</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Organic</span>
+                                <h3>Organic Paneer</h3>
+                                <p>Premium paneer from grass-fed cows.</p>
+                                <div class="product-price">
+                                    <span class="price">₹450/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="paneer" data-product-id="11">
+                            <div class="product-image">
+                                <span class="icon">🧀</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Special</span>
+                                <h3>Malai Paneer</h3>
+                                <p>Extra creamy and soft. Perfect for rich curries.</p>
+                                <div class="product-price">
+                                    <span class="price">₹400/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card" data-category="paneer" data-product-id="12">
+                            <div class="product-image">
+                                <span class="icon">🧀</span>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-badge">Ready to Cook</span>
+                                <h3>Paneer Cubes</h3>
+                                <p>Pre-cut paneer cubes. Ready to cook.</p>
+                                <div class="product-price">
+                                    <span class="price">₹380/kg</span>
+                                    <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <div style="display: inline-flex; gap: 0.5rem; align-items: center;">
+                            <button class="btn btn-secondary" disabled>← Previous</button>
+                            <button class="btn btn-primary" style="min-width: 40px;">1</button>
+                            <button class="btn btn-secondary">2</button>
+                            <button class="btn btn-secondary">3</button>
+                            <button class="btn btn-secondary">Next →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🥛</div>
+                        <span>Dudh Dairy</span>
+                    </a>
+                    <p>Fresh, pure, and healthy dairy products delivered to your doorstep. Making quality dairy accessible to every family since 2010.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="milk.html">Fresh Milk</a></li>
+                        <li><a href="dahi.html">Traditional Dahi</a></li>
+                        <li><a href="paneer.html">Fresh Paneer</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 Dairy Farm Road, Sector 15<br>Bangalore, Karnataka 560093</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@dudhdairy.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dudh Dairy. All rights reserved. Made with ❤️ for dairy lovers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

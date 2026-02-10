@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your cart - Dudh Dairy fresh dairy products">
+    <title>Shopping Cart - Dudh Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🥛</div>
+                <span>Dudh Dairy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Cart</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Page -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="empty-cart">
+                        <span class="icon">🛒</span>
+                        <h2>Your cart is empty</h2>
+                        <p>Add some delicious dairy products to get started!</p>
+                        <a href="products.html" class="btn btn-primary">Browse Products</a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="summary-subtotal">₹0</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="summary-shipping">Calculated at checkout</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span class="summary-tax">₹0</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="summary-total">₹0</span>
+                    </div>
+                    
+                    <button class="btn btn-primary checkout-btn" onclick="proceedToCheckout()">
+                        Proceed to Checkout
+                    </button>
+                    
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="products.html" style="color: var(--primary-color); text-decoration: underline;">
+                            ← Continue Shopping
+                        </a>
+                    </div>
+                    
+                    <!-- Promo Code -->
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Promo Code</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input type="text" placeholder="Enter code" style="flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+                            <button class="btn btn-secondary" style="padding: 10px 16px;">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Info -->
+    <section class="features" style="background: var(--cream);">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Free Delivery</h3>
+                    <p>On orders above ₹500. Fast and reliable delivery.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Same Day Delivery</h3>
+                    <p>Order before 10 AM for same-day delivery.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied? Return within 24 hours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Secure Payment</h3>
+                    <p>Multiple payment options available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🥛</div>
+                        <span>Dudh Dairy</span>
+                    </a>
+                    <p>Fresh, pure, and healthy dairy products delivered to your doorstep.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="milk.html">Fresh Milk</a></li>
+                        <li><a href="dahi.html">Traditional Dahi</a></li>
+                        <li><a href="paneer.html">Fresh Paneer</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 Dairy Farm Road, Sector 15<br>Bangalore, Karnataka 560093</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@dudhdairy.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dudh Dairy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Override renderCartItems to show empty state initially
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartItemsContainer = document.querySelector('.cart-items');
+            
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <span class="icon">🛒</span>
+                        <h2>Your cart is empty</h2>
+                        <p>Add some delicious dairy products to get started!</p>
+                        <a href="products.html" class="btn btn-primary">Browse Products</a>
+                    </div>
+                `;
+            } else {
+                renderCartItems();
+            }
+            updateTotal();
+        });
+    </script>
+</body>
+</html>
+

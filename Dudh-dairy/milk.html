@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh milk varieties - Cow milk, buffalo milk, A2 milk and more. Dudh Dairy offers the best quality milk.">
+    <title>Fresh Milk - Dudh Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🥛</div>
+                <span>Dudh Dairy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Fresh Milk</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span>Milk</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <span class="icon">🥛</span>
+                </div>
+                
+                <div class="product-detail-info">
+                    <h1>Fresh Cow Milk</h1>
+                    <p>Our signature cow milk is sourced from healthy, well-cared-for cows on local farms. It's pure, creamy, and packed with essential nutrients like calcium, protein, and vitamins. Delivered fresh to your doorstep every morning.</p>
+                    
+                    <div class="product-detail-price">₹60/L</div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Size:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">500ml</button>
+                            <button class="option-btn">1L</button>
+                            <button class="option-btn">2L</button>
+                            <button class="option-btn">3L</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Type:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">Regular</button>
+                            <button class="option-btn">Toned</button>
+                            <button class="option-btn">Double Toned</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label class="option-label">Quantity:</label>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="add-to-cart-section">
+                        <button class="btn btn-primary" onclick="addToCart(1, 'Fresh Cow Milk', 60, 1, '1L Regular', '🥛')">Add to Cart</button>
+                        <button class="btn btn-secondary">♡ Add to Wishlist</button>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 1rem;">Product Features:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-light);">
+                            <li>100% Pure Cow Milk - No additives</li>
+                            <li>Rich in calcium and protein</li>
+                            <li>Fresh delivery every morning</li>
+                            <li>Quality tested for purity</li>
+                            <li>Available in different fat options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Milk Products -->
+    <section class="products" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>More Milk Varieties</h2>
+                <p>Explore our range of premium quality milk products.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <span class="icon">🥛</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Popular</span>
+                        <h3>Buffalo Milk</h3>
+                        <p>Rich and creamy buffalo milk, perfect for making sweets and thick curries.</p>
+                        <div class="product-price">
+                            <span class="price">₹80/L</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="7">
+                    <div class="product-image">
+                        <span class="icon">🥛</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Organic</span>
+                        <h3>Organic A2 Milk</h3>
+                        <p>Pure A2 milk from indigenous cows. Easier to digest.</p>
+                        <div class="product-price">
+                            <span class="price">₹120/L</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="8">
+                    <div class="product-image">
+                        <span class="icon">🥛</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Skimmed</span>
+                        <h3>Toned Milk</h3>
+                        <p>Perfect for health-conscious individuals. Low fat content.</p>
+                        <div class="product-price">
+                            <span class="price">₹55/L</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Milk?</h2>
+                <p>We're committed to delivering the highest quality milk to your family.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🐄</div>
+                    <h3>Healthy Cows</h3>
+                    <p>Our cows are well-fed, disease-free, and treated with care for the best quality milk.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Quality Tested</h3>
+                    <p>Every batch is rigorously tested in our labs for purity and nutritional content.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌅</div>
+                    <h3>Morning Fresh</h3>
+                    <p>Milk is pasteurized and delivered fresh every morning for maximum nutrition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Safe Packaging</h3>
+                    <p>Packaged in food-grade, eco-friendly containers to maintain freshness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🥛</div>
+                        <span>Dudh Dairy</span>
+                    </a>
+                    <p>Fresh, pure, and healthy dairy products delivered to your doorstep.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="milk.html">Fresh Milk</a></li>
+                        <li><a href="dahi.html">Traditional Dahi</a></li>
+                        <li><a href="paneer.html">Fresh Paneer</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 Dairy Farm Road, Sector 15<br>Bangalore, Karnataka 560093</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@dudhdairy.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dudh Dairy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

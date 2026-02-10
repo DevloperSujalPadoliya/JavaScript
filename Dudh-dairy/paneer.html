@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh paneer varieties - Soft, creamy cottage cheese made from pure milk. Dudh Dairy offers premium quality paneer products.">
+    <title>Fresh Paneer - Dudh Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🥛</div>
+                <span>Dudh Dairy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Fresh Paneer</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span>Paneer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <span class="icon">🧀</span>
+                </div>
+                
+                <div class="product-detail-info">
+                    <h1>Fresh Paneer</h1>
+                    <p>Our fresh paneer is handcrafted using traditional methods from pure cow and buffalo milk. It's soft, crumbly, and perfect for all your favorite Indian dishes - from palak paneer to paneer tikka.</p>
+                    
+                    <div class="product-detail-price">₹350/kg</div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Size:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">250g</button>
+                            <button class="option-btn">500g</button>
+                            <button class="option-btn">1kg</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Type:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">Regular</button>
+                            <button class="option-btn">Malai</button>
+                            <button class="option-btn">Organic</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label class="option-label">Quantity:</label>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="add-to-cart-section">
+                        <button class="btn btn-primary" onclick="addToCart(4, 'Fresh Paneer', 350, 1, '500g Regular', '🧀')">Add to Cart</button>
+                        <button class="btn btn-secondary">♡ Add to Wishlist</button>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 1rem;">Product Features:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-light);">
+                            <li>Made from 100% pure milk - no vegetable fats</li>
+                            <li>Soft, crumbly texture that holds shape well</li>
+                            <li>Rich in protein and calcium</li>
+                            <li>Freshly made daily</li>
+                            <li>Available in regular, malai, and organic varieties</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Paneer Products -->
+    <section class="products" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>More Paneer Varieties</h2>
+                <p>Explore our range of premium paneer products for every need.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-product-id="6">
+                    <div class="product-image">
+                        <span class="icon">🧀</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Organic</span>
+                        <h3>Organic Paneer</h3>
+                        <p>Premium paneer from grass-fed cows. 100% organic certification.</p>
+                        <div class="product-price">
+                            <span class="price">₹450/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="11">
+                    <div class="product-image">
+                        <span class="icon">🧀</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Special</span>
+                        <h3>Malai Paneer</h3>
+                        <p>Extra creamy and soft. Perfect for rich curries.</p>
+                        <div class="product-price">
+                            <span class="price">₹400/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="12">
+                    <div class="product-image">
+                        <span class="icon">🧀</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Ready to Cook</span>
+                        <h3>Paneer Cubes</h3>
+                        <p>Pre-cut paneer cubes. Ready to cook instantly.</p>
+                        <div class="product-price">
+                            <span class="price">₹380/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Our Paneer is Special</h2>
+                <p>Handcrafted with care for the perfect taste and texture.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧀</div>
+                    <h3>Traditional Method</h3>
+                    <p>Made using the traditional 'chhena' method for authentic taste.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥛</div>
+                    <h3>Pure Milk</h3>
+                    <p>Sourced from healthy cows and buffaloes on local farms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Chef's Choice</h3>
+                    <p>Preferred by professional chefs for its consistent quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>No Additives</h3>
+                    <p>100% pure paneer with no artificial preservatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Ideas -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect Paneer Recipes</h2>
+                <p>Classic Indian dishes you can make with our fresh paneer.</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🍛</div>
+                    <h3>Palak Paneer</h3>
+                    <p>Creamy spinach curry with soft paneer cubes. A North Indian classic.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🍢</div>
+                    <h3>Paneer Tikka</h3>
+                    <p>Marinated and grilled paneer cubes. Perfect appetizer.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🍛</div>
+                    <h3>Matar Paneer</h3>
+                    <p>Paneer with green peas in a rich tomato gravy. Family favorite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🥛</div>
+                        <span>Dudh Dairy</span>
+                    </a>
+                    <p>Fresh, pure, and healthy dairy products delivered to your doorstep.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="milk.html">Fresh Milk</a></li>
+                        <li><a href="dahi.html">Traditional Dahi</a></li>
+                        <li><a href="paneer.html">Fresh Paneer</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 Dairy Farm Road, Sector 15<br>Bangalore, Karnataka 560093</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@dudhdairy.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dudh Dairy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

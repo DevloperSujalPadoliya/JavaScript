@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Traditional dahi and yogurt varieties - Creamy, tangy, and made the authentic way. Dudh Dairy offers premium dahi products.">
+    <title>Dahi & Yogurt - Dudh Dairy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🥛</div>
+                <span>Dudh Dairy</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Traditional Dahi & Yogurt</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span>Dahi</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <span class="icon">🥣</span>
+                </div>
+                
+                <div class="product-detail-info">
+                    <h1>Traditional Dahi</h1>
+                    <p>Our traditional dahi is made using age-old recipes and the finest quality milk. It's creamy, tangy, and perfect for your daily meals. The dahi is set in earthen pots for that authentic taste and texture.</p>
+                    
+                    <div class="product-detail-price">₹50/kg</div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Size:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">250g</button>
+                            <button class="option-btn">500g</button>
+                            <button class="option-btn">1kg</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-options">
+                        <label class="option-label">Flavor:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn active">Plain</button>
+                            <button class="option-btn">Mango</button>
+                            <button class="option-btn">Strawberry</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label class="option-label">Quantity:</label>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="add-to-cart-section">
+                        <button class="btn btn-primary" onclick="addToCart(3, 'Traditional Dahi', 50, 1, '500g Plain', '🥣')">Add to Cart</button>
+                        <button class="btn btn-secondary">♡ Add to Wishlist</button>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 1rem;">Product Features:</h4>
+                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-light);">
+                            <li>Made from 100% pure cow milk</li>
+                            <li>Set in traditional earthen pots</li>
+                            <li>Rich in probiotics and calcium</li>
+                            <li>No artificial thickeners or preservatives</li>
+                            <li>Available in various fruit flavors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Dahi Products -->
+    <section class="products" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>More Dahi Varieties</h2>
+                <p>Explore our delicious range of dahi and yogurt products.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card" data-product-id="5">
+                    <div class="product-image">
+                        <span class="icon">🥣</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Special</span>
+                        <h3>Flavored Dahi</h3>
+                        <p>Delicious fruit-flavored dahi in Mango, Strawberry & more.</p>
+                        <div class="product-price">
+                            <span class="price">₹60/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="9">
+                    <div class="product-image">
+                        <span class="icon">🥣</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Premium</span>
+                        <h3>Greek Yogurt</h3>
+                        <p>Thick and creamy Greek-style yogurt. High protein content.</p>
+                        <div class="product-price">
+                            <span class="price">₹80/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="10">
+                    <div class="product-image">
+                        <span class="icon">🥣</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Raita</span>
+                        <h3>Boondi Raita</h3>
+                        <p>Traditional boondi raita - perfect for biryani and pulao.</p>
+                        <div class="product-price">
+                            <span class="price">₹70/kg</span>
+                            <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefits of Our Dahi</h2>
+                <p>Traditional dahi is not just delicious, it's also incredibly healthy.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🦠</div>
+                    <h3>Probiotic Rich</h3>
+                    <p>Contains beneficial bacteria that support gut health and digestion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>High Protein</h3>
+                    <p>Excellent source of protein, calcium, and essential vitamins.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌡️</div>
+                    <h3>Cooling Effect</h3>
+                    <p>Perfect for summers - has natural cooling properties for the body.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Heart Healthy</h3>
+                    <p>Low cholesterol dahi options available for heart-conscious individuals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Ideas -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perfect With Dahi</h2>
+                <p>Traditional recipes that go perfectly with our dahi.</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🍚</div>
+                    <h3>Curry & Biryani</h3>
+                    <p>Use dahi as a base for creamy curries and marinades for biryani.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🥗</div>
+                    <h3>Salads & Raita</h3>
+                    <p>Mix with vegetables and spices for refreshing raitas.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🥞</div>
+                    <h3>Dips & Chutneys</h3>
+                    <p>Perfect as a base for delicious dips and side dishes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">🥛</div>
+                        <span>Dudh Dairy</span>
+                    </a>
+                    <p>Fresh, pure, and healthy dairy products delivered to your doorstep.</p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="milk.html">Fresh Milk</a></li>
+                        <li><a href="dahi.html">Traditional Dahi</a></li>
+                        <li><a href="paneer.html">Fresh Paneer</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-section footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 Dairy Farm Road, Sector 15<br>Bangalore, Karnataka 560093</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@dudhdairy.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dudh Dairy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+
